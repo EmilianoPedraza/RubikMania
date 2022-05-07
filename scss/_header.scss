@@ -1,0 +1,27 @@
+
+$bgheader: #ecf5fd;
+
+.header{
+    background-color: $bgheader;
+    h1{
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+//lo pongo así porque me da error si lo pongo dentro de h1 
+    h1 span{
+        background-color: $header-span;
+        color: $bgheader;
+    }
+}
+
+
+.header__nav{
+    ul{
+        @include display-flex(row, space-evenly, center);
+        li{ 
+            margin-bottom: 0.2em;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+    }
+}

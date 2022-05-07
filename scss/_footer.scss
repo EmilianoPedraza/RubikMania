@@ -1,0 +1,14 @@
+$facebook-color: #1a77c4;
+$instagram-color: #a32047;
+.footer{
+    @include display-flex(row, space-around, center);
+    color: $bgheader;
+    background-color: black;
+    
+}
+.instagram{
+    background-color: $instagram-color;
+}
+.facebook{
+    background-color: $facebook-color;
+}

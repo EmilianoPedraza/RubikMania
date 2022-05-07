@@ -1,0 +1,103 @@
+//generales=========================================
+$family-tittle: "IBM Plex Sans Arabic", sans-serif;
+$family-otros: "Tajawal", sans-serif;
+//-variables generales: colores----------
+$header-span: steelblue;
+//fonts mixins---------------------------------------------
+$var: 1;
+@mixin text-famy($var) {
+  @if $var!=0 {
+    font-family: $family-tittle;
+  } @else {
+    font-family: $family-otros;
+  }
+}
+
+@mixin text-features($size,$wight) {
+  font-size: $size;
+  font-weight: $wight;
+}
+
+//display mixins-------------------------------------------
+@mixin display-grid-colum($columnas, $filas, $areas) {
+  display: grid;
+  grid-template-columns: $columnas;
+  grid-template-rows: $filas;
+  grid-template-areas: $areas;
+}
+@mixin display-flex($direction, $justcon,$aligit){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justcon;
+    align-items: $aligit;
+}
+//-----------------------------------------------------------
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+li{
+  list-style: none;
+}
+//===================para modificar maquetado body============
+$parametros-grid-body: (
+  //aspectos modificables basicos--------------------
+  colums: 1fr,
+  filas: 1fr 5fr 0.5fr,
+  //-------------------------------------------------
+  areas: "cabeza" "cuerpo" "pies",
+);
+.header {
+  grid-area: cabeza;
+}
+.main {
+  grid-area: cuerpo;
+}
+.footer {
+  grid-area: pies;
+}
+//==============================================================
+body {
+  background-image: url(../assets/images/body-bg/bg.jpg);
+  background-size: cover;
+  @include display-grid-colum(
+      map-get($parametros-grid-body,colums),
+      map-get($parametros-grid-body,filas),
+      map-get($parametros-grid-body,areas)
+      );
+}
+
+//se establece font-family general----------------------------
+h1,
+h2 {
+  @include text-famy(1);
+}
+
+.header__nav ul,
+p,
+.footer__a {
+  @include text-famy(0);
+}
+//-------------------------------------------------------------
+@import "_header";
+@import "_main";
+@import "_footer";
+@import "_media";
+
+
+//
+
+.header__nav ul li:hover{
+  padding: 0;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-right: none;
+  border-left: none;
+}

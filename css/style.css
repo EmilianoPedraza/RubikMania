@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit; }
+
+li {
+  list-style: none; }
+
+.header {
+  grid-area: cabeza; }
+
+.main {
+  grid-area: cuerpo; }
+
+.footer {
+  grid-area: pies; }
+
+body {
+  background-image: url(../assets/images/body-bg/bg.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 0.5fr;
+  grid-template-areas: "cabeza" "cuerpo" "pies"; }
+
+h1,
+h2 {
+  font-family: "IBM Plex Sans Arabic", sans-serif; }
+
+.header__nav ul,
+p,
+.footer__a {
+  font-family: "Tajawal", sans-serif; }
+
+.header {
+  background-color: #ecf5fd; }
+  .header h1 {
+    text-align: center;
+    margin-bottom: 0.5em; }
+  .header h1 span {
+    background-color: steelblue;
+    color: #ecf5fd; }
+
+.header__nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; }
+  .header__nav ul li {
+    margin-bottom: 0.2em;
+    padding-top: 1px;
+    padding-bottom: 1px; }
+
+.main {
+  margin: 1em; }
+  .main picture source,
+  .main picture img {
+    width: 100%; }
+
+.main__div {
+  padding: 0.5em 0.5em 2em 0.5em; }
+  .main__div h2 {
+    color: #000000; }
+  .main__div p {
+    border-radius: 1em 1em 0 0;
+    padding: 1em; }
+
+.div__h2 {
+  text-align: center; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #ecf5fd;
+  background-color: black; }
+
+.instagram {
+  background-color: #a32047; }
+
+.facebook {
+  background-color: #1a77c4; }
+
+@media screen and (max-width: 1023px) {
+  .main {
+    width: 90%;
+    margin: 2em 5% 0 5%;
+    border-radius: 1em;
+    background: linear-gradient(to top, #07629700, #076297, #076297); }
+  .main__div {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em; } }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 600; }
+  h1 span {
+    font-size: 1.5rem;
+    font-weight: 400; }
+  .header__nav ul li {
+    font-size: 1.2rem;
+    font-weight: 400; }
+  .main__div h2 {
+    font-size: 2rem;
+    font-weight: 400; }
+  .main__div p {
+    font-size: 1.3rem;
+    font-weight: 300; }
+  .footer h3 {
+    font-size: 1.3rem;
+    font-weight: 400; }
+  .footer a {
+    font-size: 1.3rem;
+    font-weight: 400; } }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600; }
+  h1 span {
+    font-size: 2rem;
+    font-weight: 400; }
+  .header__nav ul li {
+    font-size: 1.7rem;
+    font-weight: 400; }
+  .main__div {
+    background: linear-gradient(to top, #07629700, #076297, #076297); }
+    .main__div h2 {
+      font-size: 2.2rem;
+      font-weight: 400; }
+    .main__div p {
+      font-size: 1.8rem;
+      font-weight: 300; }
+  .footer h3 {
+    font-size: 1.8rem;
+    font-weight: 400; }
+  .footer a {
+    font-size: 1.8rem;
+    font-weight: 400; } }
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  h1 {
+    font-size: 3rem;
+    font-weight: 600; }
+  h1 span {
+    font-size: 2.5rem;
+    font-weight: 400; }
+  .header__nav ul li {
+    font-size: 2.2rem;
+    font-weight: 400; }
+  .main__div {
+    background: linear-gradient(to top, #07629700, #076297, #076297); }
+    .main__div h2 {
+      font-size: 3rem;
+      font-weight: 400; }
+    .main__div p {
+      font-size: 2.3rem;
+      font-weight: 300; }
+  .footer h3 {
+    font-size: 2.3rem;
+    font-weight: 400; }
+  .footer a {
+    font-size: 2.3rem;
+    font-weight: 400; } }
+
+@media screen and (min-width: 1024px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 9em; }
+    .main div {
+      width: 45%; }
+    .main picture {
+      width: 50%; }
+  h1 {
+    font-size: 3rem;
+    font-weight: 600; }
+  h1 span {
+    font-size: 2.5rem;
+    font-weight: 400; }
+  .header__nav ul li {
+    font-size: 2.2rem;
+    font-weight: 400; }
+  .main__div {
+    background: linear-gradient(to top, #07629700, #076297, #076297); }
+    .main__div h2 {
+      font-size: 2.2rem;
+      font-weight: 400; }
+    .main__div p {
+      font-size: 1.8rem;
+      font-weight: 300; }
+  .footer h3 {
+    font-size: 2.3rem;
+    font-weight: 400; }
+  .footer a {
+    font-size: 2.3rem;
+    font-weight: 400; } }
+
+.header__nav ul li:hover {
+  padding: 0;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-right: none;
+  border-left: none; }

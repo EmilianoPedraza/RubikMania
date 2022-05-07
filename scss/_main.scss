@@ -1,0 +1,31 @@
+$color-h2: #000000;
+$bg-p-main: #ffffff;
+
+$gradient-menu: #07629700, #076297, #076297;
+
+@mixin bg-main-text{
+  background: linear-gradient(to top, $gradient-menu);
+}
+
+.main {
+  margin: 1em;
+  picture {
+    source,
+    img {
+      width: 100%;
+    }
+  }
+}
+.main__div{
+  padding: 0.5em 0.5em 2em 0.5em;
+  h2{
+    color: $color-h2;
+  }
+  p{
+    border-radius: 1em 1em 0 0;
+    padding: 1em;
+  }
+}
+.div__h2{
+  text-align: center;
+}

@@ -1,0 +1,214 @@
+$f-wight-span: 400;
+$f-wight-h1: 600;
+$f-wight-nav: 400;
+$f-widgt-main-h2: 400;
+$f-wight-main-p: 300;
+$f-widgt-footer: 400;
+
+//media x < 480 width----------------------
+
+//sizes header
+$tittle: 2rem;
+$sub-tittle: 1.5rem;
+$barnav-elements: 1.2rem;
+//sizes main
+$main-h2: 2rem;
+$main-p: 1.3rem;
+//sizes footer
+$footer-text: 1.3rem;
+
+//media x > 480 width hasta 768--------------------
+//sizes header
+$tittle-b: 2rem + 0.5;
+$sub-tittle-b: 1.5rem + 0.5;
+$barnav-elements-b: 1.2rem + 0.5;
+//sizes main
+$main-h2-b: 2rem + 0.2;
+$main-p-b: 1.3rem + 0.5;
+//sizes footer
+$footer-text-b: 1.3rem + 0.5;
+
+//media x > 768 width hasta --------------------
+//sizes header
+$tittle-c: 2rem + 1;
+$sub-tittle-c: 1.5rem + 1;
+$barnav-elements-c: 1.2rem + 1;
+//sizes main
+$main-h2-c: 2rem + 1;
+$main-p-c: 1.3rem + 1;
+//sizes footer
+$footer-text-c: 1.3rem + 1;
+//estableciendo areas de menu---------------------
+
+//dispositivos moviles---------------------------
+@media screen and(max-width: 1023px) {
+  .main {
+    width: 90%;
+    margin: 2em 5% 0 5%;
+    border-radius: 1em;
+    @include bg-main-text;
+  }
+  .main__div {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+}
+//--------------------------------------------------
+@media screen and (max-width: 480px) {
+  //header
+  h1 {
+    @include text-features($tittle, $f-wight-h1);
+  }
+  h1 span {
+    @include text-features($sub-tittle, $f-wight-span);
+  }
+  .header__nav {
+    ul {
+      li {
+        @include text-features($barnav-elements, $f-wight-nav);
+      }
+    }
+  }
+
+  //main
+  .main__div {
+    h2 {
+      @include text-features($main-h2, $f-widgt-main-h2);
+    }
+    p {
+      @include text-features($main-p, $f-wight-main-p);
+    }
+  }
+
+  .footer {
+    h3 {
+      @include text-features($footer-text, $f-widgt-footer);
+    }
+    a {
+      @include text-features($footer-text, $f-widgt-footer);
+    }
+  }
+}
+//========================================================================================================================
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  //header
+  h1 {
+    @include text-features($tittle-b, $f-wight-h1);
+  }
+  h1 span {
+    @include text-features($sub-tittle-b, $f-wight-span);
+  }
+  .header__nav {
+    ul {
+      li {
+        @include text-features($barnav-elements-b, $f-wight-nav);
+      }
+    }
+  }
+
+  //main
+  .main__div {
+    @include bg-main-text;
+    h2 {
+      @include text-features($main-h2-b, $f-widgt-main-h2);
+    }
+    p {
+      @include text-features($main-p-b, $f-wight-main-p);
+    }
+  }
+
+  .footer {
+    h3 {
+      @include text-features($footer-text-b, $f-widgt-footer);
+    }
+    a {
+      @include text-features($footer-text-b, $f-widgt-footer);
+    }
+  }
+}
+//================================================================
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  //header
+  h1 {
+    @include text-features($tittle-c, $f-wight-h1);
+  }
+  h1 span {
+    @include text-features($sub-tittle-c, $f-wight-span);
+  }
+  .header__nav {
+    ul {
+      li {
+        @include text-features($barnav-elements-c, $f-wight-nav);
+      }
+    }
+  }
+
+  //main
+  .main__div {
+    @include bg-main-text;
+    h2 {
+      @include text-features($main-h2-c, $f-widgt-main-h2);
+    }
+    p {
+      @include text-features($main-p-c, $f-wight-main-p);
+    }
+  }
+
+  .footer {
+    h3 {
+      @include text-features($footer-text-c, $f-widgt-footer);
+    }
+    a {
+      @include text-features($footer-text-c, $f-widgt-footer);
+    }
+  }
+}
+
+//dispositivos ordenadores
+@media screen and(min-width: 1024px) {
+  .main {
+    @include display-flex(row, space-between, flex-start);
+    margin-top: 9em;
+    div{
+        width: 45%;
+    }
+    picture{
+        width: 50%;
+    }
+  }
+  //header
+  h1 {
+    @include text-features($tittle-c, $f-wight-h1);
+  }
+  h1 span {
+    @include text-features($sub-tittle-c, $f-wight-span);
+  }
+  .header__nav {
+    ul {
+      li {
+        @include text-features($barnav-elements-c, $f-wight-nav);
+      }
+    }
+  }
+
+  //main
+  .main__div {
+    @include bg-main-text;
+    h2 {
+      @include text-features($main-h2-b, $f-widgt-main-h2);
+    }
+    p {
+      @include text-features($main-p-b, $f-wight-main-p);
+    }
+  }
+
+  .footer {
+    h3 {
+      @include text-features($footer-text-c, $f-widgt-footer);
+    }
+    a {
+      @include text-features($footer-text-c, $f-widgt-footer);
+    }
+  }
+}
+//
